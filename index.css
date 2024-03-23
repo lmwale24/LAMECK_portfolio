@@ -81,6 +81,9 @@ nav .MainMenu {
     display: flex;
     list-style: none;
     padding: 2%;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
 }
 
 nav .closeMenu i {
@@ -111,7 +114,7 @@ nav .MainMenu li a {
     font-size: 1rem;
     font-family: "Truculenta",
         sans-serif;
-    ;
+    
     font-weight: bold;
     transition: color 0.3s;
 
@@ -209,10 +212,10 @@ h1 {
     padding-top: 5%;
     width: auto;
     height: 100vh;
-    /* height: 500; */
     margin-right: 10%;
     object-fit: cover;
     opacity: 1;
+    padding-left: 2%;
 
 
 }
@@ -534,15 +537,18 @@ h1 {
 
 
 
+
 /* For screens smaller than 800px */
-@media(max-width: 800px) {
+@media (max-width: 800px) {
     nav {
         position: fixed;
         width: 100%;
+
     }
+        
 
     nav .MainMenu {
-        display: block;
+        /* display: block; */
         position: fixed;
         top: 0;
         left: 0;
@@ -553,6 +559,58 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .ldn-bridgeContainer img {
+        padding-left: 5%;
+        width: 480px;
+        height: 80vh;
+    }
+
+    .HeaderContainer h1 {
+        font-size: 32px;
+        padding-right: 5%;
+    }
+
+    .mainParagraph p {
+        font-size: 14px;
+    }
+
+    .mainParagraph #aboutParagraph-Header {
+        font-size: 23px;
+    }
+
+    .header-light {
+        font-size: 17px;
+    }
+
+    .slideshow-Container {
+        max-width: 750px;
+        max-height: 800px;
+    }
+
+    .Slider-wrapper .image-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 40px;
+        font-size: 0;
+        overflow-x: hidden;
+        scrollbar-width: none;
+        margin-bottom: 30px;
+    }
+
+    .Slider-wrapper .image-list .slide {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .contact-text h2 {
+        margin-top: 2%;
+    }
+
+    .contact-text h4 {
+        font-size: 40px;
     }
 
     #label {
@@ -581,17 +639,12 @@ h1 {
         position: relative;
         transition: color 0.3s;
     }
-        nav .openMenu i:hover {
-            transform: scale(1.1);
-    
-        }
 
     nav .MainMenu li a::before {
         content: '';
         position: absolute;
         top: 50%;
         right: 280px;
-        /* Adjust this value if necessary */
         width: 10px;
         height: 10px;
         background-color: white;
@@ -599,12 +652,86 @@ h1 {
         opacity: 0;
     }
 
-    nav .MainMenu li a:hover::before {
-        width: 50%;
-        opacity: 1;
+    
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .ldn-bridgeContainer img {
+        width: 240px;
+        height: 100vh;
+        height: 450px;
+        padding-left: 2%;
     }
 
-    nav .MainMenu li a:hover {
-        color: var(--secondary-color);
+        .Tech-icons i {
+            font-size: 30px;
+            display: flexbox;
+            align-items: center;
+            justify-content: center;
+
+        }
+                 .aboutHeader #label {
+                     font-size:18px ;
+                 }
+        .aboutHeader{
+            padding-top:15% ;
+        }
+    .HeaderContainer h1 {
+        font-size: 21px;
+       
     }
+
+    .mainParagraph p {
+        font-size: 11px;
+    }
+
+    .mainParagraph #aboutParagraph-Header {
+        font-size: 14px;
+    }
+
+    .header-light {
+        
+        font-size: 19px;
+    }
+
+    .slideshow-Container {
+        
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .Slider-wrapper .image-list .slide {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .mapContainer iframe{
+        padding-left: 2%;
+        height: 350px;
+        width: 250px; 
+
+    }
+    .contact-text h2 {
+        margin-top: 15%;
+        font-size:20px ;
+
+    }
+        .Projects-text #Proj-header{
+        font-size: 15px;
+    }
+
+    .contact-text h4 {
+        font-size: 22px;
+    }
+    .top i{
+        display: none;
+    }
+
+        .contact-icons  {
+           display: flex;
+           align-items: center;
+    
+        }
 }
