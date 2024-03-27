@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuLinks.forEach(link => {
         link.addEventListener('click', function () {
-            menu.style.display = 'none';
+            if (window.innerWidth < 800) {
+                menu.style.display = 'none'; 
+            }
         });
     });
 });
@@ -37,7 +39,7 @@ window.addEventListener('scroll', function() {
     var imageBottom = image.getBoundingClientRect().bottom;
 
     if (imageBottom < windowHeight) {
-        // Calculate opacity based on scroll position
+
         var opacity = 1 - (scrollPosition / windowHeight);
         image.style.opacity = opacity;
     }
