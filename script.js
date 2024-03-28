@@ -107,11 +107,32 @@ function toggleMoreText() {
         readBtn.textContent = "Read More";
     } else {
         if (readBtn.textContent === "Read More") {
-            moreText.style.whiteSpace = "normal"; // Allow text to wrap
+            moreText.style.whiteSpace = "normal"; 
             readBtn.textContent = "Read Less";
         } else {
-            moreText.style.whiteSpace = "nowrap"; // Prevent text from wrapping
+            moreText.style.whiteSpace = "nowrap"; 
             readBtn.textContent = "Read More";
         }
     }
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll("img.lazy");
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                image.src = image.dataset.src;
+                image.classList.remove('lazy');
+                observer.unobserve(image);
+            }
+        });
+    });
+
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
+});
