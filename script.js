@@ -98,3 +98,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// More text btn
+function toggleMoreText() {
+    var moreText = document.getElementById("more-text");
+    var readBtn = document.querySelector(".read");
+
+    if (moreText.textContent.length <= 250) {
+        readBtn.textContent = "Read More";
+    } else {
+        if (readBtn.textContent === "Read More") {
+            moreText.style.whiteSpace = "normal"; // Allow text to wrap
+            readBtn.textContent = "Read Less";
+        } else {
+            moreText.style.whiteSpace = "nowrap"; // Prevent text from wrapping
+            readBtn.textContent = "Read More";
+        }
+    }
+}
