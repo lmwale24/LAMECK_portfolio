@@ -136,3 +136,18 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(image);
     });
 });
+
+// 
+// Add event listener for scroll event
+window.addEventListener('scroll', function() {
+    // Get the position of the #Home section
+    var homeSection = document.getElementById('Home');
+    var homeSectionPosition = homeSection.getBoundingClientRect().top;
+  
+    // Check if the #Home section is in the viewport
+    if (homeSectionPosition < window.innerHeight && homeSectionPosition >= 0) {
+        // Apply transition effects to the #Home section
+        homeSection.style.transition = 'height 0.5s ease-in-out, opacity 0.5s ease-in-out';
+        homeSection.style.overflow = 'hidden';
+    }
+});

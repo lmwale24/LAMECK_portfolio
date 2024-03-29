@@ -9,6 +9,12 @@
     text-decoration: none;
 }
 
+#Home {
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+    /* Ensure content doesn't overflow during transition */
+}
+
 body {
     min-height: 100vh;
 
@@ -213,8 +219,7 @@ h1 {
     object-fit: cover;
     opacity: 1;
     padding-left: 2%;
-
-
+    border-radius: 40px;
 }
 
 .Proj-Container {
