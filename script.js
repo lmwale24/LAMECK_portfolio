@@ -1,21 +1,3 @@
-const MainMenu = document.querySelector('.MainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-
-
-
-openMenu.addEventListener('click', show);
-closeMenu.addEventListener('click',close);
-
-
-function show(){
-    MainMenu.style.display = 'flex';
-    MainMenu.style.top = '0';
-}
-
-function close(){
-    MainMenu.style.top = '100%';
-}
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuLinks = document.querySelectorAll('.MainMenu li a');
@@ -24,11 +6,32 @@ document.addEventListener('DOMContentLoaded', function () {
     menuLinks.forEach(link => {
         link.addEventListener('click', function () {
             if (window.innerWidth < 800) {
-                menu.style.display = 'none'; 
+                menu.style.top = '100%'; // Close the menu after a link is clicked
             }
         });
     });
+
+    // Initially hide the menu on screens smaller than 800 pixels
+    if (window.innerWidth < 800) {
+        MainMenu.style.top = '100%';
+    }
 });
+const MainMenu = document.querySelector('.MainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+
+openMenu.addEventListener('click', show);
+closeMenu.addEventListener('click', close);
+
+
+function show() {
+    MainMenu.style.top = '0';
+}
+
+function close() {
+    MainMenu.style.top = '100%';
+}
+
 
 
 // scroll functionality
