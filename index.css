@@ -107,6 +107,8 @@ nav {
     color: black;
     display: flex;
     justify-content: space-between;
+
+    
 }
 
 
@@ -210,15 +212,15 @@ h1 {
 
 
 
-
 .ldn-bridgeContainer img {
-    padding-top: 5%;
+    margin-top: 5%;
     width: 600px;
-    height: 100vh;
+    max-height: 100vh;
+    height: 700px;
     margin-right: 10%;
     object-fit: cover;
     opacity: 1;
-    padding-left: 2%;
+    /* padding-left: 2%; */
     border-radius: 40px;
 }
 
@@ -435,12 +437,12 @@ h1 {
 /* slideshow styling */
 
 .slideshow-Container {
-    padding-top: 5%;
+    
     max-width: 1500px;
     max-height: 1200px;
     width: 100%;
     padding-left: 10%;
-    margin-bottom: 4%;
+    
 }
 
 
@@ -734,11 +736,18 @@ h1 {
     }
         
 
-    .ldn-bridgeContainer img {
-        padding-left: 5%;
-        width: 480px;
-        height: 80vh;
-    }
+        .ldn-bridgeContainer img {
+            margin-top: 5%;
+            width: 450px;
+            max-height: 100vh;
+            height: 700px;
+            margin-right: 10%;
+            object-fit: cover;
+            opacity: 1;
+            padding-left: 2%;
+            border-radius: 40px;
+        }
+  
 
     .HeaderContainer h1 {
         font-size: 32px;
@@ -834,13 +843,22 @@ h1 {
 
         /* For screens smaller than 650px */
         @media (max-width: 650px) {
+
+
+
             .ldn-bridgeContainer img {
-                width: 240px;
-                height: 100vh;
-                height: 450px;
-                padding-left: 2%;
-            }
-    
+                    margin-top: 5%;
+                    width: 240px;
+                    max-height: 100vh;
+                    height: 450px;
+                    margin-right: 10%;
+                    object-fit: cover;
+                    opacity: 1;
+                    padding-left: 2%;
+                    border-radius: 40px;
+                }
+
+           
             .Tech-icons i {
                 font-size: 30px;
                          
@@ -924,6 +942,8 @@ h1 {
 
 /* For screens smaller than 480px */
 @media (max-width: 480px) {
+
+  
     .ldn-bridgeContainer img {
         width: 240px;
         height: 100vh;
@@ -1009,4 +1029,101 @@ h1 {
            align-items: center;
     
         }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 450px) {
+    .ldn-bridgeContainer img {
+        width: 220px;
+        height: 430px;
+        
+    }
+
+
+  .mainParagraph #aboutParagraph-Header {
+      font-size: 13px;
+  }
+
+    .HeaderContainer h1 {
+        font-size: 12px;
+
+    }
+
+    .mainParagraph p {
+        font-size: 11px;
+    }
+
+   
+
+    .header-light {
+
+        font-size: 15px;
+    }
+
+
+      
+
+ .slideshow-Container {
+     display: flex;
+     justify-content: center;
+     /* Horizontally center */
+     align-items: center;
+     /* Vertically center */
+     height: 100vh;
+     /* Adjust height as needed */
+ }
+
+ .Slider-wrapper {
+     max-width: 800px;
+     /* Set a maximum width if necessary */
+     /* Additional styling for the slider wrapper */
+ }
+
+ .image-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+    .Slider-wrapper .image-list .slide {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .mapContainer iframe {
+        padding-left: 2%;
+        height: 300px;
+        width: 250px;
+
+    }
+
+    .contact-text #to-work {
+        font-size: 18px;
+        padding-bottom: 2%;
+
+    }
+
+    .contact-text h2 {
+        margin-top: 30%;
+        font-size: 18px;
+
+    }
+
+    .Projects-text #Proj-header {
+        font-size: 15px;
+    }
+
+    .contact-text h4 {
+        font-size: 22px;
+    }
+
+    .top i {
+        display: none;
+    }
+
+    .contact-icons {
+        display: flex;
+        align-items: center;
+
+    }
 }

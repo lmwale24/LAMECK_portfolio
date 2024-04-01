@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollbarThumb.style.left = `${(scrollAmount / (imageList.scrollWidth - imageList.clientWidth)) * 50}%`;
             clicksToLeft++;
 
-            if (clicksToLeft === 4) {
+            if (clicksToLeft === 3) {
                 prevButton.disabled = true;
             }
         }
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
             prevButton.disabled = false;
         }
 
-        if (clicksToRight < 4) {
+        if (clicksToRight < 3) {
             scrollAmount += 550;
             imageList.scrollLeft = scrollAmount;
             scrollbarThumb.style.left = `${(scrollAmount / (imageList.scrollWidth - imageList.clientWidth)) * 50}%`;
