@@ -436,115 +436,21 @@ h1 {
 
 /* slideshow styling */
 
-.slideshow-Container {
-    
-    max-width: 1500px;
-    max-height: 1200px;
-    width: 100%;
-    padding-left: 10%;
-    
-}
 
-
-.Slider-wrapper .image-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
-    font-size: 0;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    margin-bottom: 30px;
-
-}
-
-.Slider-wrapper .image-list .slide {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-}
-
-
-
-.Slider-wrapper .image-list::-webkit-scrollbar {
-    display: none;
-}
-
-.slideshow-Container .slider-scrollbar {
-    height: 24px;
-    max-width: 100vw;
+.aboutme{
     display: flex;
     align-items: center;
-    overflow: hidden;
-}
-
-.slider-scrollbar .scrollbar-track {
-    height: 2px;
-    width: 100%;
-    background: var(--secondary-color);
-    position: relative;
-    border-radius: 4px;
-
-}
-
-.slider-scrollbar .scrollbar-thumb {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background: var(--other-color);
-    border-radius: inherit;
-    cursor: grab;
-
-}
-
-.slider-scrollbar .scrollbar-thumb:active {
-    cursor: grabbing;
-    height: 8px;
-    top: -2px;
-
-}
-
-.slider-scrollbar .scrollbar-thumb::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0%;
-    top: -10px;
-    bottom: -10px;
-
-}
-
-.Slider-wrapper {
-    position: relative;
+    justify-content: center;
 }
 
 
-
-.Slider-wrapper .slide-button {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    color: #fff;
-    background: var(--other-color);
-    font-size: 2.2rem;
-    cursor: pointer;
-    border-radius: 30%;
-    border: none;
-    outline: none;
-    position: absolute;
-    transform: translateY(-50%);
-}
-
-.Slider-wrapper .slide-button:hover {
-    background: black;
-
-}
-
-.Slider-wrapper .slide-button#prev-slide {
-    left: -20px;
-}
-
-.Slider-wrapper .slide-button#next-slide {
-    right: -20px;
+.aboutme img {
+    max-height: 100vh;
+    width: 800px;
+    height: 900px;
+    object-fit: cover;
+    object-position: 0px bottom ;
+    border-radius: 30px;
 }
 
 .Projects .Projects-text h4 {
@@ -837,6 +743,21 @@ h1 {
         transition: width 0.3s ease-in-out;
         opacity: 0;
     }
+        .aboutme {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+    
+        .aboutme img {
+            max-height: 100vh;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            object-position: 0px bottom;
+            border-radius: 30px;
+        }
 
     
 }
@@ -844,7 +765,21 @@ h1 {
         /* For screens smaller than 650px */
         @media (max-width: 650px) {
 
-
+            .aboutme {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            
+            
+                .aboutme img {
+                    max-height: 100vh;
+                    width: 450px;
+                    height: 450px;
+                    object-fit: cover;
+                    object-position: 0px bottom;
+                    border-radius: 30px;
+                }
 
             .ldn-bridgeContainer img {
                     margin-top: 5%;
@@ -1029,6 +964,20 @@ h1 {
            align-items: center;
     
         }
+       .aboutme {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        }
+        
+       .aboutme img {
+        max-height: 100vh;
+        width: 380px;
+        height: 380px;
+        object-fit: cover;
+        object-position: 0px bottom;
+        border-radius: 30px;
+        }
 }
 
 /* For screens smaller than 480px */
@@ -1054,41 +1003,32 @@ h1 {
     }
 
    
-
     .header-light {
 
         font-size: 15px;
     }
 
-
-      
-
- .slideshow-Container {
-     display: flex;
-     justify-content: center;
-     /* Horizontally center */
-     align-items: center;
-     /* Vertically center */
-     height: 100vh;
-     /* Adjust height as needed */
- }
-
- .Slider-wrapper {
-     max-width: 800px;
-     /* Set a maximum width if necessary */
-     /* Additional styling for the slider wrapper */
- }
-
- .image-list {
+   .aboutme {
     display: flex;
     align-items: center;
     justify-content: center;
- }
-    .Slider-wrapper .image-list .slide {
-        width: 250px;
-        height: 250px;
+    }
+    
+   .aboutme img {
+    max-height: 100vh;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 0px bottom;
+    border-radius: 30px;
     }
 
+      
+
+ 
+
+ 
+    
 
     .mapContainer iframe {
         padding-left: 2%;

@@ -78,6 +78,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll("img.lazy");
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                image.src = image.dataset.src;
+                image.classList.remove('lazy');
+                observer.unobserve(image);
+            }
+        });
+    });
+
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
+});
+
+
     nextButton.addEventListener('click', function () {
         if (clicksToLeft > 0) {
             clicksToLeft = 0;
@@ -121,24 +142,8 @@ function toggleMoreText() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const lazyImages = document.querySelectorAll("img.lazy");
 
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const image = entry.target;
-                image.src = image.dataset.src;
-                image.classList.remove('lazy');
-                observer.unobserve(image);
-            }
-        });
-    });
 
-    lazyImages.forEach(image => {
-        observer.observe(image);
-    });
-});
 
 // 
 // Add event listener for scroll event
