@@ -49,75 +49,11 @@ window.addEventListener('scroll', function() {
 });
 
 
-// SLIDESHOW FUNCTIONALITY
-document.addEventListener('DOMContentLoaded', function () {
-    const prevButton = document.getElementById('prev-slide');
-    const nextButton = document.getElementById('next-slide');
-    const imageList = document.querySelector('.image-list');
-    const scrollbarThumb = document.querySelector('.scrollbar-thumb');
-
-    let scrollAmount = 0;
-    let clicksToLeft = 0;
-    let clicksToRight = 0;
-
-    prevButton.addEventListener('click', function () {
-        if (clicksToRight > 0) {
-            clicksToRight = 0;
-            nextButton.disabled = false;
-        }
-
-        if (clicksToLeft < 4) {
-            scrollAmount -= 550;
-            imageList.scrollLeft = scrollAmount;
-            scrollbarThumb.style.left = `${(scrollAmount / (imageList.scrollWidth - imageList.clientWidth)) * 50}%`;
-            clicksToLeft++;
-
-            if (clicksToLeft === 3) {
-                prevButton.disabled = true;
-            }
-        }
-    });
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-    const lazyImages = document.querySelectorAll("img.lazy");
-
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const image = entry.target;
-                image.src = image.dataset.src;
-                image.classList.remove('lazy');
-                observer.unobserve(image);
-            }
-        });
-    });
-
-    lazyImages.forEach(image => {
-        observer.observe(image);
-    });
-});
 
 
-    nextButton.addEventListener('click', function () {
-        if (clicksToLeft > 0) {
-            clicksToLeft = 0;
-            prevButton.disabled = false;
-        }
-
-        if (clicksToRight < 3) {
-            scrollAmount += 550;
-            imageList.scrollLeft = scrollAmount;
-            scrollbarThumb.style.left = `${(scrollAmount / (imageList.scrollWidth - imageList.clientWidth)) * 50}%`;
-            clicksToRight++;
-
-            if (clicksToRight === 4) {
-                nextButton.disabled = true;
-            }
-        }
-    });
-});
-
+    
 
 
 

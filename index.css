@@ -170,6 +170,23 @@ nav .closeMenu {
     padding: 5%;
 }
 
+@keyframes square-in-bottom-left {
+    from {
+        clip-path: inset(0 0 100% 100%);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.transition-style {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-bottom-left both;
+}
+
+
+
+
 #label {
     margin-left: 0%;
     font-size: 20px;
@@ -617,6 +634,34 @@ h1 {
 
     }
 
+                 @media (max-width: 800px) {
+                     .services-content {
+                         flex-direction: column;
+                         align-items: center;
+                     }
+        
+        
+                     .Proj-Container {
+                         display: flex;
+                         flex-direction: column;
+                         align-items: center;
+                     }
+        
+                     .image-container {
+                         margin-bottom: 20px;
+                     }
+        
+                     .image-container img {
+                         max-width: 100%;
+                         /* Ensure the image fills its container */
+                         height: auto;
+                         /* Maintain aspect ratio */
+                     }
+        
+                     .Projects-text {
+                         text-align: center;
+                     }
+                 }
     nav .MainMenu li a {
         font-size: 2rem !important;
     }
@@ -628,12 +673,16 @@ h1 {
         width: 100%;
         height: 0;
         height: 100vh;
-        background: var(--other-color);
+        background: rgba(0, 0, 0, 0.8);
         z-index: 10;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        visibility: visible 0.3;
+        transition: opacity 1s, height 0.3s;
+        transition:  1s, height 0.3s;
+        /* Modify transition properties */
 
     }
 
@@ -676,26 +725,6 @@ h1 {
         font-size: 30px;
     }
 
-    .slideshow-Container {
-        max-width: 750px;
-        max-height: 800px;
-    }
-
-    .Slider-wrapper .image-list {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 40px;
-        font-size: 0;
-        overflow-x: hidden;
-        scrollbar-width: none;
-        margin-bottom: 30px;
-    }
-
-    .Slider-wrapper .image-list .slide {
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
-    }
 
     .contact-text h2 {
         margin-top: 2%;
@@ -758,6 +787,8 @@ h1 {
             object-position: 0px bottom;
             border-radius: 30px;
         }
+
+               
 
     
 }

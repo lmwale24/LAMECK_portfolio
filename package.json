@@ -1,0 +1,11 @@
+{
+  "name": "personal_portfolio",
+  "version": "1.0.0",
+  "description": "Welcome to my portfolio! This repository contains the source code for my personal portfolio website hosted on GitHub Pages.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
