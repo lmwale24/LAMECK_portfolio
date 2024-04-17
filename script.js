@@ -77,6 +77,23 @@ function toggleMoreText() {
 }
 
 
+// NEW More text btn
+function toggleMoreTextNew() {
+    var moreTextNew = document.getElementById("more-textNew");
+    var readBtnNew = document.querySelector(".read");
+
+    if (moreTextNew.textContent.length <= 250) {
+        readBtnNew.textContent = "Read More";
+    } else {
+        if (readBtnNew.textContent === "Read More") {
+            moreTextNew.style.whiteSpace = "normal"; 
+            readBtnNew.textContent = "Read Less";
+        } else {
+            moreTextNew.style.whiteSpace = "nowrap"; 
+            readBtnNew.textContent = "Read More";
+        }
+    }
+}
 
 
 
