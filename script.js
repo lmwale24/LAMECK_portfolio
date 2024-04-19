@@ -1,36 +1,23 @@
-
 document.addEventListener('DOMContentLoaded', function () {
+    const openMenu = document.querySelector('.openMenu');
+    const closeMenu = document.querySelector('.closeMenu');
     const menuLinks = document.querySelectorAll('.MainMenu li a');
     const menu = document.querySelector('.MainMenu');
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            if (window.innerWidth < 800) {
-                menu.style.top = '100%'; // Close the menu after a link is clicked
-            }
-        });
+    openMenu.addEventListener('click', function () {
+        menu.style.display = 'flex';
     });
 
-    // Initially hide the menu on screens smaller than 800 pixels
-    if (window.innerWidth < 800) {
-        MainMenu.style.top = '100%';
-    }
+    closeMenu.addEventListener('click', function () {
+        menu.style.display = 'none';
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            menu.style.display = 'none';
+        });
+    });
 });
-const MainMenu = document.querySelector('.MainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-
-openMenu.addEventListener('click', show);
-closeMenu.addEventListener('click', close);
-
-
-function show() {
-    MainMenu.style.top = '0';
-}
-
-function close() {
-    MainMenu.style.top = '100%';
-}
 
 
 
