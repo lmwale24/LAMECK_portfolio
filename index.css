@@ -235,6 +235,7 @@ h1 {
     font-size: 38px !important;
     color: #007bff;
     margin: 10px 0;
+    margin-bottom: 5%;
 }
 
 .mainParagraph p {
@@ -261,6 +262,7 @@ h1 {
 /* about me   section*/
 .aboutHeader {
     margin-bottom: 40px;
+    
 }
 
 .About {
@@ -331,8 +333,8 @@ h1 {
 
 
 #aboutMe{
-    font-size:25px ;
-    color: #333;
+    font-size:28px ;
+    /* color: #007bff; */
         line-height: 1.5;
         margin-bottom: 30px;
 }
@@ -563,29 +565,7 @@ h3 {
     object-fit: cover;
     border-radius: 10px;
 }
-/* Shake animation keyframes */
-@keyframes shake {
 
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: translateX(-10px);
-    }
-
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: translateX(10px);
-    }
-}
 
 /* Apply shake animation on hover */
 .screen-frame:hover {
@@ -767,6 +747,7 @@ h3 {
 
 .top i:hover {
     transform: scale(1.1);
+    color: #005f99;
 }
 
 .top i {
