@@ -36,51 +36,24 @@ window.addEventListener('scroll', function() {
 });
 
 
+function toggleMoreText(id) {
+    var moreText = document.getElementById("more-text-" + id);
+    var btnText = document.querySelector("#text-content-" + id + " .read");
 
-
+    if (moreText.classList.contains("hidden")) {
+        moreText.classList.remove("hidden");
+        btnText.textContent = "Read Less";
+    } else {
+        moreText.classList.add("hidden");
+        btnText.textContent = "Read More";
+    }
+}
 
 
     
 
 
 
-
-// More text btn
-function toggleMoreText() {
-    var moreText = document.getElementById("more-text");
-    var readBtn = document.querySelector(".read");
-
-    if (moreText.textContent.length <= 250) {
-        readBtn.textContent = "Read More";
-    } else {
-        if (readBtn.textContent === "Read More") {
-            moreText.style.whiteSpace = "normal"; 
-            readBtn.textContent = "Read Less";
-        } else {
-            moreText.style.whiteSpace = "nowrap"; 
-            readBtn.textContent = "Read More";
-        }
-    }
-}
-
-
-// NEW More text btn
-function toggleMoreTextNew() {
-    var moreTextNew = document.getElementById("more-textNew");
-    var readBtnNew = document.querySelector(".read");
-
-    if (moreTextNew.textContent.length <= 250) {
-        readBtnNew.textContent = "Read More";
-    } else {
-        if (readBtnNew.textContent === "Read More") {
-            moreTextNew.style.whiteSpace = "normal"; 
-            readBtnNew.textContent = "Read Less";
-        } else {
-            moreTextNew.style.whiteSpace = "nowrap"; 
-            readBtnNew.textContent = "Read More";
-        }
-    }
-}
 
 
 
