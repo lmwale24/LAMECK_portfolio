@@ -18,15 +18,14 @@
                 <nav> 
                 <a href="#" class="logo" id="toggle-menu">
                     <img src="Images/images.png" alt=""> 
-                <span id="label">Lameck Mwale Design </span>
                     </a>
-            <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
-            <ul class="MainMenu">
+            <div class="openMenu" onclick="showMenu()"><i class="fa-solid fa-bars"></i></div>
+            <ul class="MainMenu" >
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About me</a></li>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact me</a></li>
-                <div class="closeMenu"><i class="fa-solid fa-x"></i></div>
+                <div class="closeMenu"  onclick="hideMenu()" ><i class="fa-solid fa-x"  ></i></div>
             </ul>
             </nav>
             </div>        
@@ -44,8 +43,8 @@
                         </div>
                         <div class="mainParagraph">
                             <p> Hello, I'm Lameck Mwale, a website and Front-End Developer eager to contribute.
-                                <br> Whether you're seeking a dedicated team member or a reliable freelancer, I offer
-                                <br> expertise in crafting compelling digital experiences. For all types of users.
+                                Whether you're seeking a dedicated team member or a reliable freelancer, I offer
+                                service in crafting compelling digital experiences. For all types of users.
                             </p>
 
                             <div class="Tech-icons">
@@ -102,7 +101,7 @@
         <!-- Projects section -->
         <section class="Projects" id="Projects">
             <div class="HeaderContainer">
-                <h1 id="MainHeader">EXPLORE SOME OF MY WORK!</h1>
+                <h1 id="MainHeader">MY WORK</h1>
             </div>
             <div class="services-content">
                 <div class="box">
@@ -116,34 +115,15 @@
                                 <p id="short-text-1">
                                     Rise Revolution: Empowering Self-Improvement
                                     Rise Revolution is a front-end website promoting self-improvement. Developed for the
-                                    Rise Revolution YouTube challenge, it encourages personal growth through insightful content
-                                     and resources.
-                                     
-                                </p>
-                         
-                                  
-                                    
-                                <ul>
-                                    <p id="more-text-1" class="hidden">
+                                    Rise Revolution YouTube chanell, it encourages personal growth through insightful content
+                                     and resources.                                 
                                     Features:
-                                    <li>Home: Welcomes visitors and invites them to join the movement.</li>
-                                    <li>About: Provides insight into the founder's journey and commitment to growth.</li>
-                                    <li>Services: Offers physical, biblical, and mental development services.</li>
-                                    <li>Contact: Enables direct communication with the Rise Revolution team.</li>
-                                </ul>
-                                Tech Used:
-                                <ul>
-                                    <li>HTML, CSS, JavaScript</li>
-                                    <li>Boxicons for icons</li>
-                                    <li>Google Fonts for typography.</li>
-                                </ul>
-                                Experience Self-Improvement with Rise Revolution
-                                Rise Revolution isn't just a website; it's a gateway to personal growth and empowerment.
-                                Designed to inspire and uplift, this platform serves as a beacon of hope and motivation
-                                in challenging times.
-                                
-                                <button class="read" onclick="toggleMoreText(1)">Read More</button>
-                                </p>
+                                    Home: Welcomes visitors and invites them to join the movement.
+                                    About: Provides insight into the founder's journey and commitment to growth.
+                                    Services: Offers physical, biblical, and mental development services.
+                                    Contact: Enables direct communication with the Rise Revolution team.
+                                 </p>
+                            <p id="more-text-1" class="hidden">
                             </div>
                         </div>
                         <div class="project-image">
@@ -208,14 +188,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
-
             <!-- Contact me section -->
            
             <section class="Contact" id="Contact">
@@ -236,8 +208,7 @@
                         </div>
                         <div class="contact-icons">
                             <a href="mailto:Lameck98@outlook.com"><i class='bx bx-envelope'></i></a>
-                            <a href=""><i class='bx bxs-phone-call'></i></a>
-                            <a href=""><i class='bx bx-current-location'></i></a>
+                            <i class='bx bxs-phone-call'></i>
                         </div>
             </section>
 
@@ -259,5 +230,8 @@
               
 </body>
 </section>
-<script src="script.js"></script>
+<script src="script.js">
+
+
+</script>
 </html>
