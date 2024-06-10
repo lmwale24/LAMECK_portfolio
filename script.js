@@ -11,9 +11,22 @@
         const menu = document.querySelector('.MainMenu');
        
             menu.style.display = 'none';
-        }
+};
+
 
         
+
+// Grab all the <a> elements within the .MainMenu class
+
+const menuLinks = document.querySelectorAll('.MainMenu li a');
+
+//add event listener to each <a> element
+menuLinks.forEach(link=>{
+    link.addEventListener('click',()=>{
+        hideMenu();//call hidemenu func when <a> element is clicked
+    });
+});
+
 
 
 
